@@ -1,6 +1,6 @@
 import {createRouter, createWebHashHistory, RouteRecordRaw} from "vue-router";
 
-import Index from "../framework/Index.vue"
+import Index from "../page/Index.vue"
 
 
 const routes: RouteRecordRaw[] = [
