@@ -39,10 +39,14 @@ $color-border-menu      : #646464;
 $color-border-search-bar: #646464;
 
 $bg-color: black;
+$bg-keyboard: $bg-menu;
+$border-keyboard: transparentize(white, 0.5);
 
 // Radius
 $radius-mobile: 7px;
 $radius-pc: 10px;
+
+$text-main: transparentize(white, 0.2);
 
 // Font size
 $fz-small               : 12px;

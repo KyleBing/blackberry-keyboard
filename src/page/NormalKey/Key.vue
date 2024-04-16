@@ -44,7 +44,7 @@ const keyStyle = computed(()=>{
     cursor: pointer;
     border-left: 1px solid $bg-color;
     border-right: 1px solid $bg-color;
-    color: transparentize(white, 0.2);
+    color: $text-main;
     position: relative;
     font-family: "SF Pro Display", sans-serif;
     @include border-radius(0);
