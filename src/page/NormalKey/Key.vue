@@ -3,11 +3,11 @@
         :class="['key', {right: isRight}, {left: !isRight}]"
         :style="keyStyle">
         <div class="icon-key" v-if="isIconKey">
-            <img v-if="iconName=== 'backspace'"
+            <img v-if="iconName === EnumKeyIconName.backspace"
                  src="../../assets/normal-key/backspace.svg" alt="backspace">
-            <img v-if="iconName=== 'enter'"
+            <img v-if="iconName === EnumKeyIconName.enter"
                  src="../../assets/normal-key/enter.svg" alt="enter">
-            <img v-if="iconName=== 'alt'"
+            <img v-if="iconName === EnumKeyIconName.alt"
                  src="../../assets/normal-key/alt.svg" alt="alt">
         </div>
         <template v-else>
@@ -20,14 +20,15 @@
 
 <script lang="ts" setup>
 import {computed} from "vue";
-import {normalKeyRatio, keyWidth} from "../Config.ts";
+import {normalKeyRatio, keyWidth} from "../configKeyboard.ts";
+import {EnumKeyIconName} from "../keyMap.js";
 
 interface Props {
     mainKey: string,
     secondaryKey: string,
     isRight: boolean,
     isIconKey: boolean,
-    iconName: string
+    iconName: EnumKeyIconName
 }
 defineProps<Props>()
 

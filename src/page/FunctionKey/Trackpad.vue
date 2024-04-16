@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 import {computed} from "vue";
-import {functionPanelHeight, trackPadWidth} from "../Config.ts";
+import {functionPanelHeight, trackPadWidth} from "../configKeyboard.ts";
 
 const trackpadKeyStyle = computed(()=>{
     return `width: ${trackPadWidth}px;height: ${trackPadWidth}px`

@@ -22,7 +22,7 @@
 
 <script lang="ts" setup>
 import {computed} from "vue";
-import {EnumModel, functionKeyWidth, functionPanelHeight} from "../Config.ts";
+import {EnumModel, functionKeyWidth, functionPanelHeight} from "../configKeyboard.ts";
 import Trackpad from "./Trackpad.vue";
 
 const functionKeyStyle = computed(()=>{
@@ -62,7 +62,7 @@ defineProps<Props>()
     }
     img{
         display: block;
-        width: 40px;
+        width: 42px;
     }
 }
 

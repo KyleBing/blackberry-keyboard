@@ -36,7 +36,7 @@
 <script lang="ts" setup>
 import Key from "./Key.vue";
 import Divider from "../Divider.vue";
-import {KeyMap} from "../../keyMap.ts";
+import {KeyMap} from "../keyMap.ts";
 
 
 </script>

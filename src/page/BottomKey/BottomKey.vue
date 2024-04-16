@@ -20,7 +20,7 @@
 
 <script lang="ts" setup>
 import {computed} from "vue";
-import {normalKeyRatio, keyWidth} from "../Config.ts";
+import {normalKeyRatio, keyWidth} from "../configKeyboard.ts";
 
 const bottomKeyStyle = computed(()=>{
     return `width: ${keyWidth * 1.2}px; height: ${keyWidth * normalKeyRatio}px`

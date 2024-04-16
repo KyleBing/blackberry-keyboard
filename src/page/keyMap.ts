@@ -1,10 +1,16 @@
 import {ref} from "vue";
 
 interface KeyEntity{
-    mainKey: string,
-    secondaryKey: string,
-    isIconKey: boolean,
-    iconName: string
+    mainKey: string,   // 主键名
+    secondaryKey: string, // 符号名
+    isIconKey: boolean, // 是否为 icon 键，相对应的就是只是文字键
+    iconName: EnumKeyIconName | '' // icon 键时的 icon 名
+}
+
+enum EnumKeyIconName{
+    'backspace',
+    'alt',
+    'enter'
 }
 
 const KeyMap = ref<Array<Array<KeyEntity>>>([
@@ -30,10 +36,10 @@ const KeyMap = ref<Array<Array<KeyEntity>>>([
         {mainKey: 'J', secondaryKey: ';', isIconKey: false, iconName: ''},
         {mainKey: 'K', secondaryKey: '\'', isIconKey: false, iconName: ''},
         {mainKey: 'L', secondaryKey: '"', isIconKey: false, iconName: ''},
-        {mainKey: '←', secondaryKey: '', isIconKey: true, iconName: 'backspace'},
+        {mainKey: '←', secondaryKey: '', isIconKey: true, iconName: EnumKeyIconName.backspace},
     ],
     [
-        {mainKey: '', secondaryKey: 'alt', isIconKey: true, iconName: 'alt'},
+        {mainKey: '', secondaryKey: 'alt', isIconKey: true, iconName: EnumKeyIconName.alt},
         {mainKey: 'Z', secondaryKey: '7', isIconKey: false, iconName: ''},
         {mainKey: 'X', secondaryKey: '8', isIconKey: false, iconName: ''},
         {mainKey: 'C', secondaryKey: '9', isIconKey: false, iconName: ''},
@@ -42,10 +48,12 @@ const KeyMap = ref<Array<Array<KeyEntity>>>([
         {mainKey: 'N', secondaryKey: ',', isIconKey: false, iconName: ''},
         {mainKey: 'M', secondaryKey: '.', isIconKey: false, iconName: ''},
         {mainKey: '$', secondaryKey: '', isIconKey: false, iconName: ''},
-        {mainKey: '↙', secondaryKey: '', isIconKey: true, iconName: 'enter'},
+        {mainKey: '↙', secondaryKey: '', isIconKey: true, iconName: EnumKeyIconName.enter},
     ],
 ])
 
 export {
-    KeyMap
+    KeyMap,
+    type KeyEntity,
+    EnumKeyIconName
 }

@@ -1,7 +1,6 @@
 import {defineConfig} from 'vite'
 import vue from '@vitejs/plugin-vue'
 import svgLoader from "vite-svg-loader"
-import { VitePWA } from 'vite-plugin-pwa'
 import { resolve } from 'path'
 import zipPack from "vite-plugin-zip-pack" // make dist.zip file
 import {dateFormatter} from "./src/utility";
@@ -29,42 +28,10 @@ export default defineConfig({
     plugins: [
         vue(),
         svgLoader(),
-        VitePWA({
-            injectRegister: 'auto',
-            registerType: 'autoUpdate',
-            devOptions: {
-                enabled: true // 是否在开发模式下也启用 pwa 配置
-            },
-
-            // MANIFEST PWA https://vite-pwa-org.netlify.app/guide/pwa-minimal-requirements.html
-            includeAssets: ['logo.svg', 'apple-touch-icon.png', 'mask-icon.svg', 'favicon.png'],
-            manifest: {
-                name: '标题日记',
-                short_name: "日记",
-                theme_color: "#373737",
-                start_url: "./",
-                display: "standalone",
-                background_color: "#373737",
-                icons: [
-                    {
-                        src: "logo.svg",
-                        sizes: "512x512",
-                        type: "image/svg+xml",
-                        purpose: "any",
-                    },
-                    {
-                        src: "appicon-apple.png",
-                        sizes: "512x512",
-                        type: "image/png",
-                        purpose: "any",
-                    },
-                ],
-            },
-        }),
         zipPack({
             inDir: 'dist',
             outDir: 'archive',
-            outFileName: `diary-${timeStringNow}.zip`,
+            outFileName: `bb-keyboard-${timeStringNow}.zip`,
             pathPrefix: ''
         })
     ],

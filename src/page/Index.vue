@@ -13,7 +13,7 @@
 
 <script lang="ts" setup>
 import FunctionKey from "./FunctionKey/FunctionKey.vue";
-import {EnumModel, keyboardHeight, keyboardWidth} from "./Config.ts";
+import {EnumModel, keyboardHeight, keyboardWidth} from "./configKeyboard.ts";
 import NormalKey from "./NormalKey/NormalKey.vue";
 import BottomKey from "./BottomKey/BottomKey.vue";
 import Divider from "./Divider.vue";
