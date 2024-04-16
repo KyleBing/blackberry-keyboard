@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>normal-key/enter</title>
+    <g id="normal-key/enter" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M43,19 C43,37.2220154 43.8301046,38.0118339 25.0699722,38.0082881" id="Path-6" stroke-opacity="0.8" stroke="#FFFFFF" stroke-width="4"></path>
+        <polygon id="Triangle" fill-opacity="0.8" fill="#FFFFFF" transform="translate(18.000000, 38.000000) rotate(-90.000000) translate(-18.000000, -38.000000) " points="18 31 25 45 11 45"></polygon>
+    </g>
+</svg>

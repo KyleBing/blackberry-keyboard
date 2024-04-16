@@ -12,7 +12,7 @@ const trackpadKeyStyle = computed(()=>{
     return `width: ${trackPadWidth}px;height: ${trackPadWidth}px`
 })
 const trackpadWrapperStyle = computed(()=>{
-    return `width: ${functionPanelHeight}px;height: ${functionPanelHeight}px`
+    return `width: ${functionPanelHeight * 1.3}px;height: ${functionPanelHeight}px`
 })
 
 </script>
@@ -20,11 +20,18 @@ const trackpadWrapperStyle = computed(()=>{
 <style lang="scss" scoped>
 @import "../../scss/plugin";
 .track-pad-wrapper{
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
+    &:active{
+        .track-pad{
+            @extend .btn-like;
+        }
+    }
 }
 .track-pad{
+    cursor: pointer;
     border: 3px solid $color-border;
     @include border-radius(13px);
 }

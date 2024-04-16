@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="120px" height="80px" viewBox="0 0 120 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>function-button/hang_up</title>
-    <g id="function-button/hang_up" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <title>function-key/hang_up</title>
+    <g id="function-key/hang_up" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Group-3" transform="translate(20.320427, 14.637076)">
             <path d="M0.679572782,3.3629236 C0.679572782,19.2860005 7.05457278,22.3629236 21.6795728,22.3629236 C36.3045728,22.3629236 49.4295728,22.3629236 62.6617156,22.3629236 C73.7440189,22.3629236 77.7520813,14.9554953 78.6795728,4.3629236" id="Path-2-Copy" stroke="#FF3B30" stroke-width="9.1" transform="translate(39.679573, 12.862924) rotate(175.000000) translate(-39.679573, -12.862924) "></path>
             <g id="Group" transform="translate(26.679573, 14.362924)" fill="#FF3B30">

@@ -1,8 +1,10 @@
 const keyboardWidth = 500
-const keyboardHeight = 350
+const keyboardHeight = 310
 const keyWidth = keyboardWidth / 10
 const trackPadWidth= 42
-const functionPanelHeight = 60
+const functionPanelHeight = 70
+
+const normalKeyRatio = 1
 const functionKeyWidth = (keyboardWidth - trackPadWidth) / 5
 
 
@@ -12,5 +14,6 @@ export  {
     keyWidth,
     trackPadWidth,
     functionKeyWidth,
-    functionPanelHeight
+    functionPanelHeight,
+    normalKeyRatio
 }

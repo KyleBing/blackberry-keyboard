@@ -37,7 +37,7 @@ $toast-border-color: $bg-menu;
   }
   &-body{
     color: white;
-    font-size: $fz-list-content;
+    font-size: $fz-title;
     text-align: center;
     padding-bottom: 20px;
   }
@@ -83,7 +83,7 @@ $toast-border-color: $bg-menu;
   h3{
     color: white;
     line-height: 25px;
-    font-size: $fz-label;
+    font-size: $fz-title;
   }
   &-default { background-color: transparentize(white,0.2); }
   &-warning { background-color: transparentize($color-main,0.2); }

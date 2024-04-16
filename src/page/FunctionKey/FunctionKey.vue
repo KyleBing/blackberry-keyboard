@@ -1,17 +1,17 @@
 <template>
     <div class="function-key-wrapper">
         <div class="function-key" :style="functionKeyStyle" >
-            <img src="../../assets/function-button/call.svg" alt="call">
+            <img src="../../assets/function-key/call.svg" alt="call">
         </div>
         <div class="function-key" :style="functionKeyStyle" >
-            <img src="../../assets/function-button/blackberry.svg" alt="blackberry">
+            <img src="../../assets/function-key/blackberry.svg" alt="blackberry">
         </div>
         <Trackpad/>
         <div class="function-key" :style="functionKeyStyle" >
-            <img src="../../assets/function-button/back.svg" alt="back">
+            <img src="../../assets/function-key/back.svg" alt="back">
         </div>
         <div class="function-key" :style="functionKeyStyle" >
-            <img src="../../assets/function-button/hang_up.svg" alt="hang_up">
+            <img src="../../assets/function-key/hang_up.svg" alt="hang_up">
         </div>
     </div>
 </template>
@@ -34,18 +34,25 @@ const functionKeyStyle = computed(()=>{
     justify-content: space-between;
 }
 .function-key{
+    flex-grow: 1;
+    background-color: black;
     cursor: pointer;
     color: transparentize(white, 0.2);
     position: relative;
     font-family: "Galvji", sans-serif;
     @include border-radius(1px);
-    @extend .btn-like;
+
     display: flex;
     justify-content: center;
     align-items: center;
+    &:active{
+        img{
+            @extend .btn-like;
+        }
+    }
     img{
         display: block;
-        width: 50px;
+        width: 40px;
     }
 }
 

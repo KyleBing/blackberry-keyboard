@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>bg-key/left</title>
+    <g id="bg-key/left" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#2F2F2F" x="0" y="0" width="80" height="80"></rect>
+        <path d="M48,0 C60.6666667,9.33333333 68.6666667,36 72,80 L0,80 L0,0 C19.3333333,0 35.3333333,0 48,0 Z" id="Path-5" fill="#000000"></path>
+    </g>
+</svg>

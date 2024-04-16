@@ -9,7 +9,7 @@
 <style lang="scss" scoped>
 @import "../scss/plugin";
 .divider{
-    height: 2px;
+    height: 4px;
     width: 100%;
     background-color: white;
 }
