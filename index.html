@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!-- 搜索 -->
+    <meta name='description' content="黑莓键盘">
+    <meta name='keywords' content="黑莓键盘">
+
+    <!-- web app -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- theme color-->
+    <meta name="theme-color" content="#373737" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
+
+    <!-- fav icon -->
+    <link rel="shortcut icon" href="./favicon.png" type="image/png">
+
+    <!-- apple-touch-icon -->
+    <link rel="apple-touch-icon" href="./appicon-apple.png">
+    <!-- mask-icon 目前非必须 -->
+    <link rel="mask-icon" href="./appicon-apple.png">
+
+    <title>黑莓键盘</title>
+    <link rel="stylesheet" href="/preloading.css">
+</head>
+<body>
+
+<!--加载动画-->
+<div class="preloading">
+    <div class="logo-preloading">
+        <img src="/logo.svg" alt="LOGO">
+    </div>
+    <div class="preloading-title">载入中</div>
+    <div class="preloading-loading">
+        <div class="preloading-loading-1 preloading-loading-item"></div>
+        <div class="preloading-loading-2 preloading-loading-item"></div>
+        <div class="preloading-loading-3 preloading-loading-item"></div>
+    </div>
+</div>
+
+
+<noscript>
+    <strong>请开启JavaScript支持：未开启 JavaScript 支持的情况下，《黑莓键盘》将无法正常工作</strong>
+</noscript>
+<div id="app"></div>
+<script type="module" src="/src/main.ts"></script>
+</body>
+<script>
+    document.querySelector('.preloading').style.height = `${innerHeight}px`
+</script>
+</html>
