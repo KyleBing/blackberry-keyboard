@@ -8,6 +8,12 @@ const normalKeyRatio = 1
 const functionKeyWidth = (keyboardWidth - trackPadWidth) / 5
 
 
+enum EnumModel {
+    'bb9900',
+    'bbq10',
+    'bbq20'
+}
+
 export  {
     keyboardHeight,
     keyboardWidth,
@@ -15,5 +21,6 @@ export  {
     trackPadWidth,
     functionKeyWidth,
     functionPanelHeight,
-    normalKeyRatio
+    normalKeyRatio,
+    EnumModel
 }

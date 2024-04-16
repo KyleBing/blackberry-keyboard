@@ -2,7 +2,7 @@
     <div>
         <ShoulderKey :is-show-button-name="false"/>
         <div class="keyboard" :style="`height: ${keyboardHeight}px; width: ${keyboardWidth}px`">
-            <FunctionKey />
+            <FunctionKey :keyboard-model="EnumModel.bbq20" />
             <Divider/>
             <NormalKey/>
             <Divider/>
@@ -13,12 +13,11 @@
 
 <script lang="ts" setup>
 import FunctionKey from "./FunctionKey/FunctionKey.vue";
-import {keyboardHeight, keyboardWidth} from "./Config.ts";
+import {EnumModel, keyboardHeight, keyboardWidth} from "./Config.ts";
 import NormalKey from "./NormalKey/NormalKey.vue";
 import BottomKey from "./BottomKey/BottomKey.vue";
 import Divider from "./Divider.vue";
 import ShoulderKey from "./ShoulderKey/ShoulderKey.vue";
-
 </script>
 
 <style lang="scss" scoped>

@@ -2,7 +2,7 @@
 <svg width="120px" height="80px" viewBox="0 0 120 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>function-key/q20/hang_up</title>
     <g id="function-key/q20/hang_up" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M21,30 C21,46 27.375,49 42,49 C56.625,49 69.75,49 82.9821429,49 C94.0644461,49 100,40.5949809 100,30" id="Path-2" stroke="#FFFFFF" stroke-width="9.1" transform="translate(60.500000, 39.500000) scale(1, -1) translate(-60.500000, -39.500000) "></path>
-        <rect id="Rectangle" fill="#FFFFFF" x="38" y="44" width="45" height="5"></rect>
+        <path d="M21,30 C21,46 27.375,49 42,49 C56.625,49 69.75,49 82.9821429,49 C97,49 100,40.5949809 100,30" id="Path-2" stroke="#FFFFFF" stroke-width="9.1" transform="translate(60.500000, 39.500000) scale(1, -1) translate(-60.500000, -39.500000) "></path>
+        <rect id="Rectangle" fill="#FFFFFF" x="38" y="43" width="45" height="6"></rect>
     </g>
 </svg>

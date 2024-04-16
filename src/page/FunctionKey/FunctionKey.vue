@@ -1,29 +1,39 @@
 <template>
     <div class="function-key-wrapper">
         <div class="function-key" :style="functionKeyStyle" >
-            <img src="../../assets/function-key/call.svg" alt="call">
+            <img v-if="keyboardModel === EnumModel.bb9900" src="../../assets/function-key/9900/call.svg" alt="call">
+            <img v-if="keyboardModel === EnumModel.bbq20" src="../../assets/function-key/q20/call.svg" alt="call">
         </div>
         <div class="function-key" :style="functionKeyStyle" >
-            <img src="../../assets/function-key/blackberry.svg" alt="blackberry">
+            <img v-if="keyboardModel === EnumModel.bb9900" src="../../assets/function-key/9900/blackberry.svg" alt="blackberry">
+            <img v-if="keyboardModel === EnumModel.bbq20" src="../../assets/function-key/q20/blackberry.svg" alt="blackberry">
         </div>
         <Trackpad/>
         <div class="function-key" :style="functionKeyStyle" >
-            <img src="../../assets/function-key/back.svg" alt="back">
+            <img v-if="keyboardModel === EnumModel.bb9900" src="../../assets/function-key/9900/back.svg" alt="back">
+            <img v-if="keyboardModel === EnumModel.bbq20" src="../../assets/function-key/q20/back.svg" alt="back">
         </div>
         <div class="function-key" :style="functionKeyStyle" >
-            <img src="../../assets/function-key/hang_up.svg" alt="hang_up">
+            <img v-if="keyboardModel === EnumModel.bb9900" src="../../assets/function-key/9900/hang_up.svg" alt="hang_up">
+            <img v-if="keyboardModel === EnumModel.bbq20" src="../../assets/function-key/q20/hang_up.svg" alt="hang_up">
         </div>
     </div>
 </template>
 
 <script lang="ts" setup>
 import {computed} from "vue";
-import {functionPanelHeight, functionKeyWidth, trackPadWidth} from "../Config.ts";
+import {EnumModel, functionKeyWidth, functionPanelHeight} from "../Config.ts";
 import Trackpad from "./Trackpad.vue";
 
 const functionKeyStyle = computed(()=>{
     return `width: ${functionKeyWidth}px; height: ${functionPanelHeight}px`
 })
+
+interface Props{
+    keyboardModel: EnumModel
+}
+defineProps<Props>()
+
 
 </script>
 
