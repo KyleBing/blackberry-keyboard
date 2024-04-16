@@ -1,3 +1,31 @@
+// bg svg
+import bg_left from "./bg-key/left.svg?url"
+import bg_right from "./bg-key/right.svg?url"
+import bg_space from "./bg-key/space.svg?url"
+
+// bottom svg
+import bottom_shift from "./bottom-key/shift.svg?url"
+import bottom_space from "./bottom-key/space.svg?url"
+import bottom_sym from "./bottom-key/sym.svg?url"
+
+// normal svg
+import normal_alt from "./normal-key/alt.svg?url"
+import normal_backspace from "./normal-key/backspace.svg?url"
+import normal_enter from "./normal-key/enter.svg?url"
+
+// function key svg
+import function_9900_back from "./function-key/9900/back.svg?url"
+import function_9900_blackberry from "./function-key/9900/blackberry.svg?url"
+import function_9900_call from "./function-key/9900/call.svg?url"
+import function_9900_hang_up from "./function-key/9900/hang_up.svg?url"
+
+import function_q20_back from "./function-key/q20/back.svg?url"
+import function_q20_blackberry from "./function-key/q20/blackberry.svg?url"
+import function_q20_call from "./function-key/q20/call.svg?url"
+import function_q20_hang_up from "./function-key/q20/hang_up.svg?url"
+
+
+
 // tab icons
 import tab_invitation from "./tab/invitation.svg?url"
 import tab_add from "./tab/add.svg?url"
@@ -67,8 +95,6 @@ import EOF from "./icons/EOF.svg?url"
 import EOF_dark from "./icons/EOF_dark.svg?url"
 import content from "./icons/content.svg?url"
 import content_white from "./icons/content_white.svg?url"
-import content_md from "./icons/content_md.svg?url"
-import content_md_white from "./icons/content_md_white.svg?url"
 import clipboard from "./icons/clipboard.svg?url"
 
 export default {
@@ -82,9 +108,38 @@ export default {
     // CONTENT
     content: content,
     content_white: content_white,
-    content_md: content_md,
-    content_md_white: content_md_white,
     clipboard: clipboard,
+
+    key_bg: {
+        left: bg_left,
+        right: bg_right,
+        bg_space: bg_space,
+    },
+    key_function: {
+        bb9900: {
+            back: function_9900_back,
+            hang_up: function_9900_hang_up,
+            blackberry: function_9900_blackberry,
+            call: function_9900_call,
+        },
+        bbq20: {
+            back: function_q20_back,
+            hang_up: function_q20_hang_up,
+            blackberry: function_q20_blackberry,
+            call: function_q20_call,
+        }
+    },
+    key_normal: {
+        backspace: normal_backspace,
+        alt: normal_alt,
+        enter: normal_enter,
+    },
+
+    key_bottom: {
+        shift: bottom_shift,
+        space: bottom_space,
+        sym: bottom_sym,
+    },
 
     tab_icons: {
         invitation: tab_invitation,
@@ -145,5 +200,6 @@ export default {
         category: tab_category_black,
         year: tab_year_black,
         about: tab_about_black,
-    }
+    },
+
 }

@@ -1,19 +1,19 @@
 <template>
     <div class="bottom-key-wrapper" :style="`padding: 0 ${keyWidth}px`">
         <div class="bottom-key left" :style="bottomKeyStyle" >
-            <img src="../../assets/bottom-key/shift.svg" alt="call">
+            <img :src="SVG_ICONS.key_bottom.shift" alt="shift">
         </div>
         <div class="bottom-key left zero" :style="bottomKeyStyle" >
             <div class="main-key">0</div>
         </div>
         <div class="space-key" :style="spaceKeyStyle">
-            <img src="../../assets/bottom-key/space.svg" alt="space">
+            <img :src="SVG_ICONS.key_bottom.space" alt="space">
         </div>
         <div class="bottom-key sym right" :style="bottomKeyStyle" >
-            <img src="../../assets/bottom-key/sym.svg" alt="sym">
+            <img :src="SVG_ICONS.key_bottom.sym" alt="sym">
         </div>
         <div class="bottom-key right" :style="bottomKeyStyle" >
-            <img src="../../assets/bottom-key/shift.svg" alt="shift">
+            <img :src="SVG_ICONS.key_bottom.shift" alt="shift">
         </div>
     </div>
 </template>
@@ -21,6 +21,7 @@
 <script lang="ts" setup>
 import {computed} from "vue";
 import {normalKeyRatio, keyWidth} from "../configKeyboard.ts";
+import SVG_ICONS from "@/assets/icons/SVG_ICONS.ts";
 
 const bottomKeyStyle = computed(()=>{
     return `width: ${keyWidth * 1.2}px; height: ${keyWidth * normalKeyRatio}px`
@@ -50,11 +51,11 @@ const spaceKeyStyle = computed(()=>{
     justify-content: center;
     align-items: center;
     &.left{
-        background: url("../../assets/bg-key/left.svg") no-repeat;
+        background: url("../../assets/icons/bg-key/left.svg") no-repeat;
         background-size: cover;
     }
     &.right{
-        background: url("../../assets/bg-key/right.svg") no-repeat;
+        background: url("../../assets/icons/bg-key/right.svg") no-repeat;
         background-size: cover;
     }
     &.zero{

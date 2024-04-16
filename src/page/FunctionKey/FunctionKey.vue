@@ -1,21 +1,21 @@
 <template>
     <div class="function-key-wrapper">
         <div class="function-key" :style="functionKeyStyle" >
-            <img v-if="keyboardModel === EnumModel.bb9900" src="../../assets/function-key/9900/call.svg" alt="call">
-            <img v-if="keyboardModel === EnumModel.bbq20" src="../../assets/function-key/q20/call.svg" alt="call">
+            <img v-if="keyboardModel === EnumModel.bb9900" :src="SVG_ICONS.key_function.bb9900.call" alt="call">
+            <img v-if="keyboardModel === EnumModel.bbq20" :src="SVG_ICONS.key_function.bbq20.call" alt="call">
         </div>
         <div class="function-key" :style="functionKeyStyle" >
-            <img v-if="keyboardModel === EnumModel.bb9900" src="../../assets/function-key/9900/blackberry.svg" alt="blackberry">
-            <img v-if="keyboardModel === EnumModel.bbq20" src="../../assets/function-key/q20/blackberry.svg" alt="blackberry">
+            <img v-if="keyboardModel === EnumModel.bb9900" :src="SVG_ICONS.key_function.bb9900.blackberry" alt="blackberry">
+            <img v-if="keyboardModel === EnumModel.bbq20" :src="SVG_ICONS.key_function.bbq20.blackberry" alt="blackberry">
         </div>
         <Trackpad/>
         <div class="function-key" :style="functionKeyStyle" >
-            <img v-if="keyboardModel === EnumModel.bb9900" src="../../assets/function-key/9900/back.svg" alt="back">
-            <img v-if="keyboardModel === EnumModel.bbq20" src="../../assets/function-key/q20/back.svg" alt="back">
+            <img v-if="keyboardModel === EnumModel.bb9900" :src="SVG_ICONS.key_function.bb9900.back" alt="back">
+            <img v-if="keyboardModel === EnumModel.bbq20" :src="SVG_ICONS.key_function.bbq20.back" alt="back">
         </div>
         <div class="function-key" :style="functionKeyStyle" >
-            <img v-if="keyboardModel === EnumModel.bb9900" src="../../assets/function-key/9900/hang_up.svg" alt="hang_up">
-            <img v-if="keyboardModel === EnumModel.bbq20" src="../../assets/function-key/q20/hang_up.svg" alt="hang_up">
+            <img v-if="keyboardModel === EnumModel.bb9900" :src="SVG_ICONS.key_function.bb9900.hang_up" alt="hang_up">
+            <img v-if="keyboardModel === EnumModel.bbq20" :src="SVG_ICONS.key_function.bbq20.hang_up" alt="hang_up">
         </div>
     </div>
 </template>
@@ -24,6 +24,7 @@
 import {computed} from "vue";
 import {EnumModel, functionKeyWidth, functionPanelHeight} from "../configKeyboard.ts";
 import Trackpad from "./Trackpad.vue";
+import SVG_ICONS from "@/assets/icons/SVG_ICONS.ts";
 
 const functionKeyStyle = computed(()=>{
     return `width: ${functionKeyWidth}px; height: ${functionPanelHeight}px`

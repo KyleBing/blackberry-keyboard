@@ -4,11 +4,11 @@
         :style="keyStyle">
         <div class="icon-key" v-if="isIconKey">
             <img v-if="iconName === EnumKeyIconName.backspace"
-                 src="../../assets/normal-key/backspace.svg" alt="backspace">
+                 :src="SVG_ICONS.key_normal.backspace" alt="backspace">
             <img v-if="iconName === EnumKeyIconName.enter"
-                 src="../../assets/normal-key/enter.svg" alt="enter">
+                 :src="SVG_ICONS.key_normal.enter" alt="enter">
             <img v-if="iconName === EnumKeyIconName.alt"
-                 src="../../assets/normal-key/alt.svg" alt="alt">
+                 :src="SVG_ICONS.key_normal.alt" alt="alt">
         </div>
         <template v-else>
             <div class="main-key">{{ mainKey }}</div>
@@ -22,6 +22,7 @@
 import {computed} from "vue";
 import {normalKeyRatio, keyWidth} from "../configKeyboard.ts";
 import {EnumKeyIconName} from "../keyMap.js";
+import SVG_ICONS from "@/assets/icons/SVG_ICONS.ts";
 
 interface Props {
     mainKey: string,
@@ -51,7 +52,7 @@ const keyStyle = computed(()=>{
     @include border-radius(0);
     @extend .btn-like;
     &.right{
-        background: url("../../assets/bg-key/right.svg") no-repeat 100% 100%;
+        background: url("../../assets/icons/bg-key/right.svg") no-repeat 100% 100%;
         background-size: cover;
         .secondary-key{
             right: 5px;
@@ -61,7 +62,7 @@ const keyStyle = computed(()=>{
         }
     }
     &.left{
-        background: url("../../assets/bg-key/left.svg") no-repeat 100% 100%;
+        background: url("../../assets/icons/bg-key/left.svg") no-repeat 100% 100%;
         background-size: cover;
         .secondary-key {
             left: 5px;
