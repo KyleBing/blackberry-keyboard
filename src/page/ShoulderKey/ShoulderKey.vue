@@ -5,7 +5,6 @@
         <div class="switch"></div>
         <div class="shoulder-key" v-if="isShowButtonName">鼠标右键</div>
         <div class="shoulder-key-no-title" v-else/>
-
     </div>
 </template>
 
@@ -42,6 +41,7 @@ $height-button: 6px;
         background-color: $bg-keyboard;
         @include border-radius(10px 10px 0 0 );
         @include box-shadow(10px 4px 15px transparentize(black, 0.8));
+        @extend .btn-like;
         &.left{
 
         }
@@ -50,6 +50,7 @@ $height-button: 6px;
         }
     }
     .shoulder-key-no-title{
+        @extend .btn-like;
         background-color: $bg-keyboard;
         border: 1px solid $border-keyboard;
         border-bottom: none;
