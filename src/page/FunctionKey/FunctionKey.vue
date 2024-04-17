@@ -1,14 +1,14 @@
 <template>
     <div class="function-key-wrapper" :style="functionKeyWrapperStyle">
         <template v-if="keyboardModel === EnumModel.bb9900">
-            <div class="function-key" :style="functionKeyStyle" >
+            <div class="function-key" @click="$emit('switchModel', EnumModel.bbq20)" :style="functionKeyStyle" >
                 <img :src="SVG_ICONS.key_function.bb9900.call" alt="call">
             </div>
-            <div class="function-key" :style="functionKeyStyle" >
+            <div class="function-key" @click="$emit('switchModel', EnumModel.bbq10)" :style="functionKeyStyle" >
                 <img :src="SVG_ICONS.key_function.bb9900.blackberry" alt="blackberry">
             </div>
             <Trackpad :is-q10="false"/>
-            <div class="function-key" :style="functionKeyStyle" >
+            <div class="function-key" @click="$emit('switchModel', EnumModel.bb9900)" :style="functionKeyStyle" >
                 <img :src="SVG_ICONS.key_function.bb9900.back" alt="back">
             </div>
             <div class="function-key" :style="functionKeyStyle" >
@@ -16,14 +16,14 @@
             </div>
         </template>
         <template v-if="keyboardModel === EnumModel.bbq20">
-            <div class="function-key" :style="functionKeyStyle" >
+            <div class="function-key" @click="$emit('switchModel', EnumModel.bbq20)" :style="functionKeyStyle" >
                 <img :src="SVG_ICONS.key_function.bbq20.call" alt="call">
             </div>
-            <div class="function-key" :style="functionKeyStyle" >
+            <div class="function-key" @click="$emit('switchModel', EnumModel.bbq10)" :style="functionKeyStyle" >
                 <img :src="SVG_ICONS.key_function.bbq20.blackberry" alt="blackberry">
             </div>
             <Trackpad :is-q10="false"/>
-            <div class="function-key" :style="functionKeyStyle" >
+            <div class="function-key" @click="$emit('switchModel', EnumModel.bb9900)" :style="functionKeyStyle" >
                 <img :src="SVG_ICONS.key_function.bbq20.back" alt="back">
             </div>
             <div class="function-key" :style="functionKeyStyle" >
@@ -31,14 +31,14 @@
             </div>
         </template>
         <template v-if="keyboardModel === EnumModel.bbq10">
-            <div class="function-key q10" :style="functionKeyStyle" >
+            <div class="function-key q10" @click="$emit('switchModel', EnumModel.bbq20)" :style="functionKeyStyle" >
                 <img :src="SVG_ICONS.key_function.bbq10.call" alt="call">
             </div>
-            <div class="function-key q10" :style="functionKeyStyle" >
+            <div class="function-key q10" @click="$emit('switchModel', EnumModel.bbq10)" :style="functionKeyStyle" >
                 <img :src="SVG_ICONS.key_function.bbq10.blackberry" alt="blackberry">
             </div>
             <Trackpad :is-q10="true"/>
-            <div class="function-key q10" :style="functionKeyStyle" >
+            <div class="function-key q10" @click="$emit('switchModel', EnumModel.bb9900)" :style="functionKeyStyle" >
                 <img :src="SVG_ICONS.key_function.bbq10.back" alt="back">
             </div>
             <div class="function-key q10" :style="functionKeyStyle" >
@@ -53,6 +53,8 @@ import {computed} from "vue";
 import {EnumModel, functionKeyWidth, functionPanelHeight} from "../configKeyboard.ts";
 import Trackpad from "./Trackpad.vue";
 import SVG_ICONS from "@/assets/icons/SVG_ICONS.ts";
+
+defineEmits(['switchModel'])  // 切换模型事件
 
 const functionKeyStyle = computed(()=>{
     return `width: ${functionKeyWidth}px; height: ${functionPanelHeight}px`

@@ -9,10 +9,16 @@ const functionKeyWidth = (keyboardWidth - trackPadWidth) / 5
 
 
 enum EnumModel {
-    'bb9900',
-    'bbq10',
-    'bbq20'
+    bb9900,
+    bbq10,
+    bbq20
 }
+
+const ModelNameMap = new Map([
+    [EnumModel.bbq10, "BlackBerry Q10"],
+    [EnumModel.bbq20, "BlackBerry Q20"],
+    [EnumModel.bb9900, "BlackBerry 9900"],
+])
 
 export  {
     keyboardHeight,
@@ -22,5 +28,6 @@ export  {
     functionKeyWidth,
     functionPanelHeight,
     normalKeyRatio,
-    EnumModel
+    EnumModel,
+    ModelNameMap
 }
