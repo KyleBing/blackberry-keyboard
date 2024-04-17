@@ -25,7 +25,7 @@ import ShoulderKey from "./ShoulderKey/ShoulderKey.vue";
 import {computed, ref} from "vue";
 
 // 当前模型
-const currentKeyboardModel = ref(EnumModel.bbq10)
+const currentKeyboardModel = ref(EnumModel.bbq20)
 
 const keyboardStyle = computed(()=> {
     switch (currentKeyboardModel.value){
