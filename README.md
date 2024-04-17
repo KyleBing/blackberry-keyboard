@@ -1,6 +1,3 @@
-<img width="893" alt="Screenshot 2024-04-16 at 18 08 16" src="https://github.com/KyleBing/blackberry-keyboard/assets/12215982/1bd1a81e-c911-4617-bca7-07a6ff93b8da">
-
-
 # BlackBerry Keyboard
 
 黑莓键盘
@@ -13,3 +10,7 @@ EnumKeyboardModel
 - bb9900
 - bbq10
 - bbq20
+
+
+<img width="886" alt="Screenshot 2024-04-17 at 11 17 08" src="https://github.com/KyleBing/blackberry-keyboard/assets/12215982/1606f2c2-4a5c-4a6a-9cf7-5668bb4f738a">
+<img width="924" alt="Screenshot 2024-04-17 at 11 16 58" src="https://github.com/KyleBing/blackberry-keyboard/assets/12215982/3cb16a31-e704-408c-8920-e769c8f7a33e">
