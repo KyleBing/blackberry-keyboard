@@ -25,6 +25,12 @@ import function_q20_call from "./function-key/q20/call.svg?url"
 import function_q20_hang_up from "./function-key/q20/hang_up.svg?url"
 
 
+import function_q10_back from "./function-key/q10/back.svg?url"
+import function_q10_blackberry from "./function-key/q10/blackberry.svg?url"
+import function_q10_call from "./function-key/q10/call.svg?url"
+import function_q10_hang_up from "./function-key/q10/hang_up.svg?url"
+
+
 
 // tab icons
 import tab_invitation from "./tab/invitation.svg?url"
@@ -127,6 +133,12 @@ export default {
             hang_up: function_q20_hang_up,
             blackberry: function_q20_blackberry,
             call: function_q20_call,
+        },
+        bbq10: {
+            back: function_q10_back,
+            hang_up: function_q10_hang_up,
+            blackberry: function_q10_blackberry,
+            call: function_q10_call,
         }
     },
     key_normal: {

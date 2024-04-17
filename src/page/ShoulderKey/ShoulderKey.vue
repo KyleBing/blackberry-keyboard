@@ -14,7 +14,7 @@
 import {computed} from "vue";
 
 interface Props{
-    isShowButtonName: boolean
+    isShowButtonName: boolean // 是否显示肩按键名字
 }
 const props = defineProps<Props>()
 

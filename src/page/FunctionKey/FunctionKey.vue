@@ -1,22 +1,50 @@
 <template>
-    <div class="function-key-wrapper">
-        <div class="function-key" :style="functionKeyStyle" >
-            <img v-if="keyboardModel === EnumModel.bb9900" :src="SVG_ICONS.key_function.bb9900.call" alt="call">
-            <img v-if="keyboardModel === EnumModel.bbq20" :src="SVG_ICONS.key_function.bbq20.call" alt="call">
-        </div>
-        <div class="function-key" :style="functionKeyStyle" >
-            <img v-if="keyboardModel === EnumModel.bb9900" :src="SVG_ICONS.key_function.bb9900.blackberry" alt="blackberry">
-            <img v-if="keyboardModel === EnumModel.bbq20" :src="SVG_ICONS.key_function.bbq20.blackberry" alt="blackberry">
-        </div>
-        <Trackpad/>
-        <div class="function-key" :style="functionKeyStyle" >
-            <img v-if="keyboardModel === EnumModel.bb9900" :src="SVG_ICONS.key_function.bb9900.back" alt="back">
-            <img v-if="keyboardModel === EnumModel.bbq20" :src="SVG_ICONS.key_function.bbq20.back" alt="back">
-        </div>
-        <div class="function-key" :style="functionKeyStyle" >
-            <img v-if="keyboardModel === EnumModel.bb9900" :src="SVG_ICONS.key_function.bb9900.hang_up" alt="hang_up">
-            <img v-if="keyboardModel === EnumModel.bbq20" :src="SVG_ICONS.key_function.bbq20.hang_up" alt="hang_up">
-        </div>
+    <div class="function-key-wrapper" :style="functionKeyWrapperStyle">
+        <template v-if="keyboardModel === EnumModel.bb9900">
+            <div class="function-key" :style="functionKeyStyle" >
+                <img :src="SVG_ICONS.key_function.bb9900.call" alt="call">
+            </div>
+            <div class="function-key" :style="functionKeyStyle" >
+                <img :src="SVG_ICONS.key_function.bb9900.blackberry" alt="blackberry">
+            </div>
+            <Trackpad :is-q10="false"/>
+            <div class="function-key" :style="functionKeyStyle" >
+                <img :src="SVG_ICONS.key_function.bb9900.back" alt="back">
+            </div>
+            <div class="function-key" :style="functionKeyStyle" >
+                <img :src="SVG_ICONS.key_function.bb9900.hang_up" alt="hang_up">
+            </div>
+        </template>
+        <template v-if="keyboardModel === EnumModel.bbq20">
+            <div class="function-key" :style="functionKeyStyle" >
+                <img :src="SVG_ICONS.key_function.bbq20.call" alt="call">
+            </div>
+            <div class="function-key" :style="functionKeyStyle" >
+                <img :src="SVG_ICONS.key_function.bbq20.blackberry" alt="blackberry">
+            </div>
+            <Trackpad :is-q10="false"/>
+            <div class="function-key" :style="functionKeyStyle" >
+                <img :src="SVG_ICONS.key_function.bbq20.back" alt="back">
+            </div>
+            <div class="function-key" :style="functionKeyStyle" >
+                <img :src="SVG_ICONS.key_function.bbq20.hang_up" alt="hang_up">
+            </div>
+        </template>
+        <template v-if="keyboardModel === EnumModel.bbq10">
+            <div class="function-key q10" :style="functionKeyStyle" >
+                <img :src="SVG_ICONS.key_function.bbq10.call" alt="call">
+            </div>
+            <div class="function-key q10" :style="functionKeyStyle" >
+                <img :src="SVG_ICONS.key_function.bbq10.blackberry" alt="blackberry">
+            </div>
+            <Trackpad :is-q10="true"/>
+            <div class="function-key q10" :style="functionKeyStyle" >
+                <img :src="SVG_ICONS.key_function.bbq10.back" alt="back">
+            </div>
+            <div class="function-key q10" :style="functionKeyStyle" >
+                <img :src="SVG_ICONS.key_function.bbq10.hang_up" alt="hang_up">
+            </div>
+        </template>
     </div>
 </template>
 
@@ -29,11 +57,19 @@ import SVG_ICONS from "@/assets/icons/SVG_ICONS.ts";
 const functionKeyStyle = computed(()=>{
     return `width: ${functionKeyWidth}px; height: ${functionPanelHeight}px`
 })
+const functionKeyWrapperStyle = computed(()=>{
+    switch (props.keyboardModel){
+        case EnumModel.bbq10:
+            return `padding: 0 13px 8px`
+        default:
+            return `padding: 0`
+    }
+})
 
 interface Props{
-    keyboardModel: EnumModel
+    keyboardModel: EnumModel // 显示什么模型的按键
 }
-defineProps<Props>()
+const props = defineProps<Props>()
 
 
 </script>
@@ -56,6 +92,18 @@ defineProps<Props>()
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &.q10{
+        background-color: transparent;
+        img{
+            @include border-radius(10px);
+            padding: 2px;
+            background-color: white;
+            display: block;
+            width: 64px;
+        }
+    }
+
     &:active{
         img{
             @extend .btn-like;

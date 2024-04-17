@@ -13,7 +13,7 @@ const route = useRoute()
 const router = useRouter()
 
 onBeforeMount(() => {
-    // 日记项目载入后，隐藏 preloading
+    // 项目载入后，隐藏 preloading
     (document.querySelector('.preloading') as HTMLDivElement).style.display = 'none'
 
     // 获取当前颜色模式
