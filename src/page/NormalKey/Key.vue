@@ -20,21 +20,29 @@
 
 <script lang="ts" setup>
 import {computed} from "vue";
-import {normalKeyRatio, keyWidth} from "../configKeyboard.ts";
+import {normalKeyRatio, keyWidth, normalKeyRatio9900, EnumKeyboardModel} from "../configKeyboard.ts";
 import {EnumKeyIconName} from "../keyMap.js";
 import SVG_ICONS from "@/assets/icons/SVG_ICONS.ts";
 
 interface Props {
     mainKey: string,
+    keyboardModel: EnumKeyboardModel,
     secondaryKey: string,
+    marginTop?: number,
+    is9900?: boolean,
     isRight: boolean,
     isIconKey: boolean,
     iconName: EnumKeyIconName
 }
-defineProps<Props>()
+const props = defineProps<Props>()
 
 const keyStyle = computed(()=>{
-    return `width: ${keyWidth}px; height: ${keyWidth * normalKeyRatio}px`
+    switch (props.keyboardModel){
+        case EnumKeyboardModel.bb9900:
+            return `width: ${keyWidth}px; height: ${keyWidth * normalKeyRatio9900}px; margin-top: ${props.marginTop}px`
+        default:
+            return `width: ${keyWidth}px; height: ${keyWidth * normalKeyRatio}px`
+    }
 })
 
 </script>
@@ -52,8 +60,10 @@ const keyStyle = computed(()=>{
     @include border-radius(0);
     @extend .btn-like;
     &.right{
-        background: url("../../assets/icons/bg-key/right.svg") no-repeat 100% 100%;
+        background-image: url("../../assets/icons/bg-key/right.svg");
+        background-repeat: no-repeat;
         background-size: cover;
+        background-position: 0 0;
         .secondary-key{
             right: 5px;
         }

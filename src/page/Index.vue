@@ -1,11 +1,18 @@
 <template>
     <div>
         <ShoulderKey :is-show-button-name="false"/>
-        <div class="keyboard" :style="keyboardStyle">
+        <div class="keyboard" :style="keyboardStyle" v-if="currentKeyboardModel === EnumKeyboardModel.bb9900">
+            <FunctionKey9900
+                @switchModel="switchModel"
+                :keyboard-model="currentKeyboardModel" />
+            <NormalKey9900 :keyboard-model="currentKeyboardModel"/>
+            <Divider99003 :keyboard-model="currentKeyboardModel" style="margin-top: -17px;"/>
+            <BottomKey style="margin-top: -25px;"/>
+        </div>
+        <div class="keyboard" :style="keyboardStyle" v-else>
             <FunctionKey
                 @switchModel="switchModel"
                 :keyboard-model="currentKeyboardModel" />
-            <Divider :keyboard-model="currentKeyboardModel"/>
             <NormalKey :keyboard-model="currentKeyboardModel"/>
             <Divider :keyboard-model="currentKeyboardModel"/>
             <BottomKey/>
@@ -17,19 +24,22 @@
 
 <script lang="ts" setup>
 import FunctionKey from "./FunctionKey/FunctionKey.vue";
-import {EnumModel, keyboardHeight, keyboardWidth, ModelNameMap} from "./configKeyboard.ts";
+import {EnumKeyboardModel, keyboardHeight, keyboardWidth, ModelNameMap} from "./configKeyboard.ts";
 import NormalKey from "./NormalKey/NormalKey.vue";
 import BottomKey from "./BottomKey/BottomKey.vue";
-import Divider from "./Divider.vue";
+import Divider from "./Divider/Divider.vue";
 import ShoulderKey from "./ShoulderKey/ShoulderKey.vue";
 import {computed, ref} from "vue";
+import FunctionKey9900 from "@/page/FunctionKey/FunctionKey9900.vue";
+import NormalKey9900 from "@/page/NormalKey/9900/NormalKey9900.vue";
+import Divider99003 from "@/page/Divider/Divider9900-3.vue";
 
 // 当前模型
-const currentKeyboardModel = ref(EnumModel.bbq20)
+const currentKeyboardModel = ref(EnumKeyboardModel.bb9900)
 
 const keyboardStyle = computed(()=> {
     switch (currentKeyboardModel.value){
-        case EnumModel.bbq10:
+        case EnumKeyboardModel.bbq10:
             return `height: ${keyboardHeight}px; width: ${keyboardWidth}px; padding: 20px 35px 35px` // Q10 的 顶部 5 键有所不同
         default:
             return `height: ${keyboardHeight}px; width: ${keyboardWidth}px`
@@ -37,7 +47,7 @@ const keyboardStyle = computed(()=> {
 })
 
 // 切换模型
-function switchModel(keyboardModel: EnumModel){
+function switchModel(keyboardModel: EnumKeyboardModel){
     currentKeyboardModel.value = keyboardModel
 }
 
@@ -46,6 +56,7 @@ function switchModel(keyboardModel: EnumModel){
 <style lang="scss" scoped>
 @import "../scss/plugin";
 .keyboard{
+    position: relative;
     flex-shrink: 0;
     background-color: $bg-keyboard;
     box-sizing: content-box;

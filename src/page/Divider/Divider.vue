@@ -4,11 +4,11 @@
 
 <script lang="ts" setup>
 import {computed} from "vue";
-import {EnumModel} from "@/page/configKeyboard.ts";
+import {EnumKeyboardModel} from "@/page/configKeyboard.js";
 
 const dividerStyle = computed(()=>{
     switch (props.keyboardModel){
-        case EnumModel.bbq10:
+        case EnumKeyboardModel.bbq10:
             return `width: 102%; margin-left: -1%`
         default:
             break
@@ -16,7 +16,7 @@ const dividerStyle = computed(()=>{
 })
 
 interface Props{
-    keyboardModel: EnumModel // 显示什么模型的按键
+    keyboardModel: EnumKeyboardModel // 显示什么模型的按键
 }
 const props = defineProps<Props>()
 
@@ -24,7 +24,7 @@ const props = defineProps<Props>()
 </script>
 
 <style lang="scss" scoped>
-@import "../scss/plugin";
+@import "../../scss/plugin";
 .divider{
     height: 4px;
     width: 100%;

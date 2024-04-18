@@ -30,7 +30,11 @@ import function_q10_blackberry from "./function-key/q10/blackberry.svg?url"
 import function_q10_call from "./function-key/q10/call.svg?url"
 import function_q10_hang_up from "./function-key/q10/hang_up.svg?url"
 
-
+// divider svg
+import divider_0 from "./9900/divider-0.svg?url"
+import divider_1 from "./9900/divider-1.svg?url"
+import divider_2 from "./9900/divider-2.svg?url"
+import divider_3 from "./9900/divider-3.svg?url"
 
 // tab icons
 import tab_invitation from "./tab/invitation.svg?url"
@@ -116,6 +120,12 @@ export default {
     content_white: content_white,
     clipboard: clipboard,
 
+    divider: {
+        divider_0,
+        divider_1,
+        divider_2,
+        divider_3,
+    },
     key_bg: {
         left: bg_left,
         right: bg_right,
