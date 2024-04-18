@@ -99,6 +99,10 @@ import tab_about_black from "./tab/about_black.svg?url"
 // LOGO
 import logo from "./logo/logo.svg?url"
 
+// LOGO
+import trackpad_bb9900 from "./tackpad/bb9900.svg?url"
+import trackpad_bbq20 from "./tackpad/bbq20.svg?url"
+
 // OTHERS
 // EOF
 import EOF from "./icons/EOF.svg?url"
@@ -119,6 +123,12 @@ export default {
     content: content,
     content_white: content_white,
     clipboard: clipboard,
+
+    trackpad: {
+        bbq10: trackpad_bb9900,
+        bbq20: trackpad_bbq20,
+        bb9900: trackpad_bb9900,
+    },
 
     divider: {
         divider_0,

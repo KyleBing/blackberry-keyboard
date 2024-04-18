@@ -35,7 +35,7 @@ import NormalKey9900 from "@/page/NormalKey/9900/NormalKey9900.vue";
 import Divider99003 from "@/page/Divider/Divider9900-3.vue";
 
 // 当前模型
-const currentKeyboardModel = ref(EnumKeyboardModel.bb9900)
+const currentKeyboardModel = ref(EnumKeyboardModel.bbq20)
 
 const keyboardStyle = computed(()=> {
     switch (currentKeyboardModel.value){

@@ -1,12 +1,15 @@
 <template>
     <div class="track-pad-wrapper" :style="trackpadWrapperStyle">
-        <div class="track-pad" :style="trackpadKeyStyle"></div>
+        <div class="track-pad" :style="trackpadKeyStyle">
+            <img :src="SVG_ICONS.trackpad.bb9900" alt="trackpad">
+        </div>
     </div>
 </template>
 
 <script lang="ts" setup>
 import {computed} from "vue";
 import {EnumKeyboardModel, functionPanelHeight, trackPadWidth} from "../configKeyboard.ts";
+import SVG_ICONS from "@/assets/icons/SVG_ICONS.ts";
 
 interface Props{
     keyboardModel: EnumKeyboardModel
@@ -53,8 +56,12 @@ const trackpadWrapperStyle = computed(()=>{
 .track-pad{
     background-color: black;
     cursor: pointer;
-    border: 3px solid $color-border;
-    @include border-radius(13px);
+    //border: 3px solid $color-border;
+    //@include border-radius(13px);
+    img{
+        display: block;
+        width: 100%;
+    }
 }
 
 </style>
