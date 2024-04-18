@@ -13,7 +13,7 @@ EnumKeyboardModel
 - bbq20
 
 
-<img width="886" alt="Screenshot 2024-04-17 at 11 17 08" src="https://github.com/KyleBing/blackberry-keyboard/assets/12215982/1606f2c2-4a5c-4a6a-9cf7-5668bb4f738a">
-<img width="924" alt="Screenshot 2024-04-17 at 11 16 58" src="https://github.com/KyleBing/blackberry-keyboard/assets/12215982/3cb16a31-e704-408c-8920-e769c8f7a33e">
-<img width="1032" alt="Screenshot 2024-04-18 at 11 36 53" src="https://github.com/KyleBing/blackberry-keyboard/assets/12215982/0a07b5bc-828b-40a6-a403-eb4db91fa263">
+<img width="1368" alt="Screenshot 2024-04-18 at 16 02 49" src="https://github.com/KyleBing/blackberry-keyboard/assets/12215982/e98b2cc2-ea9a-4cdd-b2ea-12e05aa85b2b">
+<img width="1368" alt="Screenshot 2024-04-18 at 16 02 53" src="https://github.com/KyleBing/blackberry-keyboard/assets/12215982/4c63c26e-4966-4f72-8e5e-74361f5095ee">
+<img width="1368" alt="Screenshot 2024-04-18 at 16 02 56" src="https://github.com/KyleBing/blackberry-keyboard/assets/12215982/518c10c7-e3af-4c6c-8a63-855b1d9c7ce6">
 
