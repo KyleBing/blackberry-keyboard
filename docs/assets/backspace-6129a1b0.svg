@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>normal-key/backspace</title>
+    <g id="normal-key/backspace" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M48.5,16.5 L48.5,43.5 L20.2427325,43.5 L8.95523247,30 L20.2427325,16.5 L48.5,16.5 Z" id="Rectangle" stroke-opacity="0.8" stroke="#FFFFFF" stroke-width="3"></path>
+        <polygon id="Path" fill-opacity="0.8" fill="#FFFFFF" fill-rule="nonzero" points="32.5 31.75 37.84375 37.09375 39.46875 35.46875 34.140625 30.109375 39.46875 24.75 37.84375 23.125 32.5 28.46875 27.15625 23.125 25.53125 24.75 30.859375 30.109375 25.53125 35.46875 27.15625 37.09375"></polygon>
+    </g>
+</svg>
