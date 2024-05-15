@@ -2,6 +2,9 @@
     <div class="container">
         <router-view/>
     </div>
+    <div class="github-link">
+        <a href="https://github.com/KyleBing/blackberry-keyboard">github</a>
+    </div>
 </template>
 <script lang="ts" setup>
 import {useProjectStore} from "./pinia";
@@ -58,6 +61,16 @@ onMounted(()=> {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.github-link{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    a{
+        font-size: 12px;
+        text-decoration: underline;
+        color: white;
+    }
 }
 </style>
 
