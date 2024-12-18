@@ -26,6 +26,7 @@ const props = defineProps<Props>()
 <style lang="scss" scoped>
 @import "../../scss/plugin";
 .divider{
+    pointer-events: none;
     height: 4px;
     width: 100%;
     background-color: white;

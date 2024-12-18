@@ -1,7 +1,9 @@
 <template>
     <div>
         <ShoulderKey :is-show-button-name="false"/>
-        <div class="keyboard" :style="keyboardStyle" v-if="currentKeyboardModel === EnumKeyboardModel.bb9900">
+        <div
+            v-if="currentKeyboardModel === EnumKeyboardModel.bb9900"
+            class="keyboard" :style="keyboardStyle" >
             <FunctionKey9900
                 @switchModel="switchModel"
                 :keyboard-model="currentKeyboardModel" />
@@ -9,7 +11,9 @@
             <Divider99003 :keyboard-model="currentKeyboardModel" style="margin-top: -17px;"/>
             <BottomKey style="margin-top: -25px;"/>
         </div>
-        <div class="keyboard" :style="keyboardStyle" v-else>
+        <div
+            v-else
+            class="keyboard" :style="keyboardStyle">
             <FunctionKey
                 @switchModel="switchModel"
                 :keyboard-model="currentKeyboardModel" />

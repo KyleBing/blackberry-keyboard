@@ -69,7 +69,7 @@ onMounted(()=> {
     a{
         font-size: 12px;
         text-decoration: underline;
-        color: white;
+        color: transparentize(white,0.6);
     }
 }
 </style>

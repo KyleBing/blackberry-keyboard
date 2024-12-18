@@ -12,6 +12,8 @@ EnumKeyboardModel
 - bbq10
 - bbq20
 
+[http://kylebing.cn/tools/bb-keyboard](http://kylebing.cn/tools/bb-keyboard)
+
 
 <img width="1368" alt="Screenshot 2024-04-18 at 16 02 49" src="https://github.com/KyleBing/blackberry-keyboard/assets/12215982/e98b2cc2-ea9a-4cdd-b2ea-12e05aa85b2b">
 <img width="1368" alt="Screenshot 2024-04-18 at 16 02 53" src="https://github.com/KyleBing/blackberry-keyboard/assets/12215982/4c63c26e-4966-4f72-8e5e-74361f5095ee">

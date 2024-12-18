@@ -11,6 +11,7 @@ import SVG_ICONS from "@/assets/icons/SVG_ICONS.ts";
 <style lang="scss" scoped>
 @import "../../scss/plugin";
 .divider{
+    pointer-events: none;
     position: relative;
     z-index: 100;
     height: 40px;
